@@ -8,7 +8,11 @@ class Page
 
     public function __construct($uri)
     {
-        if( ! preg_match('/^[a-z-]$/', $uri) === 1) {
+        $uri = trim($uri, '/');
+
+        // \w includes [a-z A-Z 0-9 _ ]
+
+        if(preg_match('/^[\w-]+$/', $uri) !== 1) {
             throw new \DomainException('Illegal filename. Only letters and dash is allowed');
         }
 
