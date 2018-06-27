@@ -1,0 +1,17 @@
+{
+    "name": "vikan/minimal-wiki",
+    "description": "A small markdown-based wiki.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Dag",
+            "email": "me@dvikan.no"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "vikan\\wiki\\": "src"
+        }
+    }
+}
