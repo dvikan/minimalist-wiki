@@ -11,7 +11,7 @@ E.g. `var/svn-tutorial.md`.
 <div>
 <?php
     foreach($pages as $page) {
-        print "<a href=\"$page\">$page</a>";
+        print "<a href=\"$page\">$page</a> <br>";
     }
 ?>
 </div>
