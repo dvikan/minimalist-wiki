@@ -1,19 +1,30 @@
-<style>
-    html {
-    }
+<html>
 
+<head>
+<title>Minimalist Wiki ♥ </title>
+
+<style>
     .container {
-        background: grey;
+        background: #efefef;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 10px;
-        background: #F2F2F2;
+        padding: 5px;
         color: #333;
     }
 </style>
 
+</head>
+
+<body>
+
 <div class="container">
+
+<span style="float: right">
+<a href="https://github.com/dvikan/minimalist-wiki">
+    Minimalist Wiki
+    </a>
+</span>
 
 <a href="/">Index</a>
 
-<span style="float: right">Minimalist Wiki</span>
+

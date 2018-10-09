@@ -1,21 +1,12 @@
-<?php
-    include __DIR__.'/header.tpl';
-?>
+<div class="index">
 
-<p>
-Want to create a new page?
-Create a new file in the `var` folder.
-E.g. `var/svn-tutorial.md`.
-</p>
+<h1>
+    Index
+</h1>
 
-<div>
-<?php
-    foreach($pages as $page) {
-        print "<a href=\"$page\">$page</a> <br>";
-    }
-?>
+        <?php
+            foreach($pages as $page) {
+                print "<a href=\"$page\">$page</a> <br>";
+            }
+        ?>
 </div>
-
-<?php
-    include __DIR__.'/footer.tpl';
-?>

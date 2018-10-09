@@ -12,6 +12,7 @@
     "autoload": {
         "psr-4": {
             "vikan\\wiki\\": "src"
-        }
+        },
+        "files": ["src/functions.php"]
     }
 }

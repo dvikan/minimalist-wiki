@@ -2,17 +2,11 @@
 
 namespace vikan\wiki;
 
-class Frontpage
+class Index
 {
     public function __invoke()
     {
-        $pages = $this->getPages();
-
-        ob_start();
-        require TEMPLATES_DIR . '/index.tpl';
-        $html = ob_get_clean();
-
-        return $html;
+        return render('index.tpl', ['pages' => $this->getPages()]);
     }
 
     private function getPages()

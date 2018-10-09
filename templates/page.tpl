@@ -1,13 +1,3 @@
-<?php
-    include __DIR__.'/header.tpl';
-?>
-
 <div class="page">
-<?php
-    print $compiledMarkdown;
-?>
+    <?= $body ?>
 </div>
-
-<?php
-    include __DIR__.'/footer.tpl';
-?>

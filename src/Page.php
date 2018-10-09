@@ -11,9 +11,8 @@ class Page
         $uri = trim($uri, '/');
 
         // \w includes [a-z A-Z 0-9 _ ]
-
         if(preg_match('/^[\w-]+$/', $uri) !== 1) {
-            throw new \DomainException('Illegal filename. Only letters and dash is allowed');
+            throw new \DomainException;
         }
 
         $this->uri = $uri;
@@ -21,31 +20,16 @@ class Page
 
     public function __invoke()
     {
-        $filepath = MARKDOWN_DIR.'/'.$this->uri.'.md';
+        $filepath = MARKDOWN_DIR . $this->uri . '.md';
 
-        $compiledMarkdown = $this->compileMarkdown($filepath);
-
-        ob_start();
-        require TEMPLATES_DIR.'/page.tpl';
-        $html = ob_get_clean();
-
-        return $html;
-    }
-
-    private function compileMarkdown($filepath)
-    {
         if ( ! file_exists($filepath)) {
-            return '<br>404';
+            return render('404.tpl', ['message' => 'Nonexisting!']);
         }
 
-        $escapedFilepath = escapeshellarg($filepath); // Prevents arbitrary command execution
-
+        // Prevents arbitrary command execution
+        $escapedFilepath = escapeshellarg($filepath);
         $result = shell_exec("markdown $escapedFilepath");
 
-        if($result === null) {
-            return 'Compilation of markdown failed. Run apt-get install markdown';
-        }
-
-        return $result;
+        return render('page.tpl', ['body' => $result]);
     }
 }
