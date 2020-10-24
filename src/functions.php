@@ -1,6 +1,6 @@
 <?php
 
-namespace vikan\wiki;
+namespace dvikan\SimpleWiki;
 
 const TEMPLATES_DIR = __DIR__.'/../templates/';
 

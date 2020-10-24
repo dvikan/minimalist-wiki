@@ -1,11 +1,12 @@
 # Minimalist Wiki
 
-1. Store markdown files in `var`
-2. Spin up builtin HTTP server: `php -S localhost:8080 public/index.php`
-3. Visit http://localhost:8080/
+A simple markdown-based wiki.
 
-## Requirements
+## Get started
 
-Markdown available in cli:
-
-    $ sudo apt-get install markdown
+    sudo apt-get install markdown
+    git clone git@github.com:dvikan/minimalist-wiki.git
+    cd minimalist-wiki
+    composer dump
+    php -S localhost:8080 public/index.php
+    http://localhost:8080/

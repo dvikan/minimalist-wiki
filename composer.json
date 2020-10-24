@@ -1,7 +1,8 @@
 {
-    "name": "vikan/minimal-wiki",
-    "description": "A small markdown-based wiki.",
+    "name": "dvikan/simple-wiki",
+    "description": "A simple markdown-based wiki",
     "type": "project",
+    "license": "MIT",
     "authors": [
         {
             "name": "Dag",
@@ -11,7 +12,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "vikan\\wiki\\": "src"
+            "dvikan\\SimpleWiki\\": "src"
         },
         "files": ["src/functions.php"]
     }
