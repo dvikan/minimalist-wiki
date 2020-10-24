@@ -1,4 +1,4 @@
-# Minimalist Wiki
+# Simple Wiki
 
 A simple markdown-based wiki.
 
